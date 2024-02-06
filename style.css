@@ -30,6 +30,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    font-family: 'Roboto', sans-serif;
+   
     
 }
 ol, ul {
@@ -57,6 +59,18 @@ table {
     --background: #EBD9B4;
     --accent: #638889;
     --cards: #F9EFDB;
+    --font: rgb(129, 127, 120);
+}
+
+
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+h4 {
+    font-weight: 600;
 }
 
 div {
@@ -104,6 +118,7 @@ ul > h1{
 .main{
     display: grid;
     grid-template-rows: 7fr 25fr;
+    
 
 }
 
@@ -227,7 +242,29 @@ ul > h1{
     border-radius: 5px;
     border-left: var(--accent) 8px solid;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    padding: 30px 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 
+}
+
+.card > div > span{
+    color: var(--font);
+}
+
+.card > div > h3{
+    padding-bottom: 5px;
+}
+
+.card-icon{
+    align-self: end;
+}
+
+.card-icon > img{
+    width: 24px;
+    padding-left: 10px;
 }
 
 .right-content{
@@ -248,9 +285,45 @@ ul > h1{
 }
 
 .announcements{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    justify-content:space-evenly;
     
 }
 
-.trending{
+.announcements h4{
+    padding: 15px 5px 5px 5px;
+}
 
+.announcements > span{
+    font-size: 13px;
+    color: var(--font);
+    border-bottom: var(--font) 1px solid;
+    padding: 0 5px 15px 5px;
+}
+
+#last{
+    border-bottom: none;
+}
+
+.trending{
+    padding: 30px 20px;
+    display: grid;
+    grid-template: repeat(8, 1fr) / auto 2fr;
+    column-gap: 10px;
+}
+
+.trending > span{
+    align-self: self-start;
+    color: var(--font);
+}
+
+.trending > h5{
+    align-self: self-end;
+    margin-bottom: 5px;
+}
+
+.trending > img{
+    grid-row: span 2;
 }
